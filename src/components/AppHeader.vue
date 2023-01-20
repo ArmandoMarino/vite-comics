@@ -65,7 +65,7 @@ export default {
 
 <template>
     <header class="container">
-        <figure>
+        <figure id="logo-header">
             <a href="#">
                 <img src="../assets/img/dc-logo.png" alt="DC_Logo">
             </a>
@@ -83,6 +83,15 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/mixins' as *;
 
+#logo-header {
+    padding: 1rem;
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
 header {
     @include flex-between;
 
@@ -99,7 +108,7 @@ ul {
 
     li {
         list-style-type: none;
-        font-size: 14px;
+        font-size: 10px;
         padding: 10px;
 
         a {
