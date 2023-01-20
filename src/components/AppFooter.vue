@@ -3,7 +3,7 @@ export default {
     name: 'AppFooter',
     data() {
         return {
-            dcComics: [
+            links: [
 
                 {
                     text: 'Characters',
@@ -46,7 +46,7 @@ export default {
                     url: '#',
                 },
             ],
-            shop: [
+            shoplinks: [
                 {
                     text: 'shop dc',
                     url: '#',
@@ -57,7 +57,7 @@ export default {
                     url: '#',
                 },
             ],
-            dc: [
+            dclinks: [
                 {
                     text: 'terms of use',
                     url: '#',
@@ -103,7 +103,7 @@ export default {
                     url: '#',
                 }
             ],
-            sites: [
+            siteslinks: [
                 {
                     text: 'DC',
                     url: '#',
@@ -132,10 +132,16 @@ export default {
 
 <template>
     <footer>
+        <!-- NAV LINKS -->
         <section id="footer-links" class="container">
             <nav>
+                <h3>DC COMICS</h3>
                 <ul>
-                    <li></li>
+                    <li v-for="link in links">{{ link.text }}</li>
+                </ul>
+                <h3>SHOP</h3>
+                <ul>
+                    <li v-for="shoplink in shoplinks">{{ shoplink.text }}</li>
                 </ul>
             </nav>
 
@@ -145,4 +151,16 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/mixins' as *;
+
+ul {
+
+    li {
+        list-style-type: none;
+        font-size: 12px;
+
+        a {
+            text-transform: uppercase;
+        }
+    }
+}
 </style>
