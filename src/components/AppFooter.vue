@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppHeader',
+    name: 'AppFooter',
     data() {
         return {
             dcComics: [
@@ -131,9 +131,18 @@ export default {
 </script>
 
 <template>
+    <footer>
+        <section id="footer-links" class="container">
+            <nav>
+                <ul>
+                    <li></li>
+                </ul>
+            </nav>
 
+        </section>
+    </footer>
 </template>
 
-<style>
-
+<style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
 </style>

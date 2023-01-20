@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppJumbo from './components/AppJumbo.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'vite-comics',
@@ -11,7 +12,8 @@ export default {
   },
   components: {
     AppHeader,
-    AppJumbo
+    AppJumbo,
+    AppFooter
   }
 }
 </script>
@@ -19,6 +21,7 @@ export default {
 <template>
   <AppHeader />
   <AppJumbo />
+  <AppFooter />
 </template>
 
 <style lang="scss">
