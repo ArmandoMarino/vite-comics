@@ -81,10 +81,25 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
+
+header {
+    @include flex-between;
+
+}
+
+nav {
+    flex-direction: row;
+    flex-basis: calc(100%/4);
+    width: 100%;
+}
+
 ul {
+    @include flex-between;
 
     li {
         list-style-type: none;
+        padding: 10px;
     }
 }
 </style>
