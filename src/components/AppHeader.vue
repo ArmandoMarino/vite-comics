@@ -99,7 +99,12 @@ ul {
 
     li {
         list-style-type: none;
+        font-size: 14px;
         padding: 10px;
+
+        a {
+            text-transform: uppercase;
+        }
     }
 }
 </style>
