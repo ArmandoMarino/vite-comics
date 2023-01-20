@@ -32,6 +32,12 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        buildImagePath(image) {
+            const url = new URL(`../assets/img/${image}`, import.meta.url);
+            return url.href;
+        }
     }
 }
 </script>
@@ -50,6 +56,7 @@ export default {
             <nav class="container">
                 <!-- LINK LIST -->
                 <ul>
+                    <!-- TODO v-for -->
                     <li></li>
                 </ul>
             </nav>
