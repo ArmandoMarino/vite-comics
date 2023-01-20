@@ -57,7 +57,7 @@ export default {
                 <!-- LINK LIST -->
                 <ul>
                     <!-- TODO v-for -->
-                    <li></li>
+                    <li> TODO</li>
                 </ul>
             </nav>
         </section>
