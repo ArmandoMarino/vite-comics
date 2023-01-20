@@ -38,14 +38,17 @@ export default {
 
 <template>
     <main>
+        <!-- BLACKBOARD -->
         <section id="contents-space">
             <div class="blackboard">
                 <h3>--> Content goes here </h3>
             </div>
         </section>
 
-        <section>
-            <nav>
+        <!-- CENTER NAV -->
+        <section id="center-nav">
+            <nav class="container">
+                <!-- LINK LIST -->
                 <ul>
                     <li></li>
                 </ul>
@@ -66,6 +69,26 @@ export default {
         h3 {
             color: white;
             margin-left: 15rem;
+        }
+    }
+}
+
+
+#center-nav {
+    min-height: 140px;
+    background-color: #0282f9;
+}
+
+ul {
+    @include flex-between;
+
+    li {
+        list-style-type: none;
+        font-size: 10px;
+        padding: 10px;
+
+        a {
+            text-transform: uppercase;
         }
     }
 }
