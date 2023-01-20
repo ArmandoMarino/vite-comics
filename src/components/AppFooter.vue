@@ -174,14 +174,39 @@ export default {
             </nav>
 
         </section>
+
+        <!-- SOCIALS -->
+        <section id="footer-socials">
+            <div id="wrapper" class="container">
+                <div id="sign-up">
+                    <h3>SIGN-UP NOW!</h3>
+                </div>
+
+                <div id="follow">
+                    <h3>FOLLOW US</h3>
+                    <a href="#"><i class="fa-brands fa-2xl fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-2xl fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-2xl fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-2xl fa-pinterest"></i></a>
+                    <a href="#"><i class="fa-solid fa-2xl fa-location-dot"></i></a>
+                </div>
+            </div>
+
+        </section>
     </footer>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/mixins' as *;
 
+// NAV LINKS FOOTER-UP
+footer {
+    background-image: url(../assets/img/footer-bg.jpg);
+}
+
 #footer-links {
     max-height: 300px;
+    color: white;
 
     nav {
         display: flex;
@@ -202,6 +227,44 @@ ul {
 
         a {
             text-transform: capitalize;
+            color: grey;
+        }
+    }
+}
+
+// SOCIALS FOOTER-BOTTOM
+#footer-socials {
+    background-color: #303030;
+    height: 100px;
+
+    #wrapper {
+        @include flex-between;
+        height: 100%;
+    }
+
+    #sign-up {
+        padding: 10px;
+        border: 2px #0282f9 solid;
+        text-align: center;
+
+        h3 {
+            font-size: 15px;
+            color: grey;
+        }
+    }
+
+    #follow {
+        @include flex-between;
+
+        h3 {
+            font-size: 15px;
+            padding: 10px;
+            color: #0282f9;
+        }
+
+        a {
+            color: gray;
+            padding: 5px;
         }
     }
 }
