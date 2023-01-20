@@ -139,25 +139,35 @@ export default {
                 <div class="col">
                     <h3>DC COMICS</h3>
                     <ul>
-                        <li v-for="link in links">{{ link.text }}</li>
+                        <li v-for="link in links">
+                            <a :href="link.url">{{ link.text }}</a>
+                        </li>
                     </ul>
                     <h3>SHOP</h3>
                     <ul>
-                        <li v-for="shoplink in shoplinks">{{ shoplink.text }}</li>
+                        <li v-for="shoplink in shoplinks">
+                            <a :href="shoplink.url">{{ shoplink.text }}</a>
+                        </li>
                     </ul>
                 </div>
+
                 <!-- COL CENTER -->
                 <div class="col">
                     <h3>DC</h3>
                     <ul>
-                        <li v-for="dclink in dclinks">{{ dclink.text }}</li>
+                        <li v-for="dclink in dclinks">
+                            <a :href="dclink.url">{{ dclink.text }}</a>
+                        </li>
                     </ul>
                 </div>
+
                 <!-- COL RIGHT -->
                 <div class="col">
                     <h3>SITES</h3>
                     <ul>
-                        <li v-for="siteslink in siteslinks">{{ siteslink.text }}</li>
+                        <li v-for="siteslink in siteslinks">
+                            <a :href="siteslink.url">{{ siteslink.text }}</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -179,17 +189,19 @@ export default {
 
     .col {
         flex-basis: 15%;
+        margin-top: 10px;
     }
 }
 
 ul {
+    margin-bottom: 10px;
 
     li {
         list-style-type: none;
         font-size: 12px;
 
         a {
-            text-transform: uppercase;
+            text-transform: capitalize;
         }
     }
 }
