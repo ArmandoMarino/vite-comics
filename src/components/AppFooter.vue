@@ -135,14 +135,32 @@ export default {
         <!-- NAV LINKS -->
         <section id="footer-links" class="container">
             <nav>
-                <h3>DC COMICS</h3>
-                <ul>
-                    <li v-for="link in links">{{ link.text }}</li>
-                </ul>
-                <h3>SHOP</h3>
-                <ul>
-                    <li v-for="shoplink in shoplinks">{{ shoplink.text }}</li>
-                </ul>
+                <!-- COL LEFT -->
+                <div class="col">
+                    <h3>DC COMICS</h3>
+                    <ul>
+                        <li v-for="link in links">{{ link.text }}</li>
+                    </ul>
+                    <h3>SHOP</h3>
+                    <ul>
+                        <li v-for="shoplink in shoplinks">{{ shoplink.text }}</li>
+                    </ul>
+                </div>
+                <!-- COL CENTER -->
+                <div class="col">
+                    <h3>DC</h3>
+                    <ul>
+                        <li v-for="dclink in dclinks">{{ dclink.text }}</li>
+                    </ul>
+                </div>
+                <!-- COL RIGHT -->
+                <div class="col">
+                    <h3>SITES</h3>
+                    <ul>
+                        <li v-for="siteslink in siteslinks">{{ siteslink.text }}</li>
+                    </ul>
+                </div>
+
             </nav>
 
         </section>
@@ -151,6 +169,18 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/mixins' as *;
+
+#footer-links {
+    max-height: 300px;
+
+    nav {
+        display: flex;
+    }
+
+    .col {
+        flex-basis: 15%;
+    }
+}
 
 ul {
 
