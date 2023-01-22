@@ -69,7 +69,7 @@ export default {
         </figure>
         <nav>
             <ul>
-                <li v-for="link in links" :key="link.text">
+                <li v-for="link in links" :key="link.text" :class="{ 'active': link.current }">
                     <a :href="link.url">{{ link.text }}</a>
                 </li>
             </ul>
@@ -79,6 +79,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/mixins' as *;
+@use '../assets/scss/partials/variables' as *;
 
 #logo-header {
     padding: 1rem;
@@ -102,11 +103,19 @@ nav {
 
 ul {
     @include flex-between;
+    height: 100px;
+
+    .active {
+        border-bottom: 2px solid $primaryblue;
+    }
 
     li {
+        @include flex-between;
         list-style-type: none;
         font-size: 10px;
         padding: 10px;
+        height: 100%;
+
 
         a {
             text-transform: uppercase;
