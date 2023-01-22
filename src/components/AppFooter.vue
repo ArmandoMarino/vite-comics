@@ -198,6 +198,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/mixins' as *;
+@use '../assets/scss/partials/variables' as *;
 
 // NAV LINKS FOOTER-UP
 footer {
@@ -234,7 +235,7 @@ ul {
 
 // SOCIALS FOOTER-BOTTOM
 #footer-socials {
-    background-color: #303030;
+    background-color: $grey;
     height: 100px;
 
     #wrapper {
@@ -244,7 +245,7 @@ ul {
 
     #sign-up {
         padding: 10px;
-        border: 2px #0282f9 solid;
+        border: 2px $primaryblue solid;
         text-align: center;
 
         h3 {
@@ -259,7 +260,7 @@ ul {
         h3 {
             font-size: 15px;
             padding: 10px;
-            color: #0282f9;
+            color: $primaryblue;
         }
 
         a {
