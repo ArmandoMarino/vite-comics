@@ -90,8 +90,10 @@ export default {
                 <!-- LINK LIST -->
                 <ul>
                     <li v-for="jumboimage in jumboimages">
-                        <img :src="buildImagePath(jumboimage.image)" alt="">
-                        <a :href="jumboimage.url">{{ jumboimage.text }}</a>
+                        <a :href="jumboimage.url">
+                            <img :src="buildImagePath(jumboimage.image)" alt="">
+                            {{ jumboimage.text }}
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -118,20 +120,29 @@ export default {
 
 
 #center-nav {
+    @include flex-between;
     min-height: 140px;
     background-color: $primaryblue;
-}
 
-ul {
-    @include flex-between;
+    ul {
+        @include flex-between;
 
-    li {
-        list-style-type: none;
-        font-size: 10px;
-        padding: 10px;
+        li {
 
-        a {
-            text-transform: uppercase;
+            list-style-type: none;
+            font-size: 10px;
+            padding: 30px;
+
+            a {
+                @include flex-between;
+                color: white;
+                text-transform: uppercase;
+
+                img {
+                    margin: 7px;
+                    width: 40px;
+                }
+            }
         }
     }
 }
