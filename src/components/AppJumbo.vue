@@ -30,6 +30,39 @@ export default {
                     url: '#',
                     current: false,
                 },
+            ],
+            jumboimages: [
+                {
+                    text: 'digital comics',
+                    image: 'buy-comics-digital-comics.png',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'dc merchandise',
+                    image: 'buy-comics-merchandise.png',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'subscription',
+                    image: 'buy-comics-subscriptions.png',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'comic shop locator',
+                    image: 'buy-comics-shop-locator.png',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'dc power visa',
+                    image: 'buy-dc-power-visa.svg',
+                    url: '#',
+                    current: false,
+                },
+
             ]
         }
     },
@@ -56,8 +89,10 @@ export default {
             <nav class="container">
                 <!-- LINK LIST -->
                 <ul>
-                    <!-- TODO v-for -->
-                    <li> TODO</li>
+                    <li v-for="jumboimage in jumboimages">
+                        <img :src="buildImagePath(jumboimage.image)" alt="">
+                        <a :href="jumboimage.url">{{ jumboimage.text }}</a>
+                    </li>
                 </ul>
             </nav>
         </section>
@@ -66,6 +101,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/mixins' as *;
+@use '../assets/scss/partials/variables' as *;
 
 #contents-space {
     .blackboard {
@@ -83,7 +119,7 @@ export default {
 
 #center-nav {
     min-height: 140px;
-    background-color: #0282f9;
+    background-color: $primaryblue;
 }
 
 ul {
