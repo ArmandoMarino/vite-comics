@@ -220,7 +220,8 @@ footer {
     }
 
     .col {
-        flex-basis: 15%;
+        flex-basis: 20%;
+        margin-right: 5px;
         margin-top: 10px;
     }
 }
