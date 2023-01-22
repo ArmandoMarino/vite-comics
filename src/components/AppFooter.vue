@@ -135,6 +135,9 @@ export default {
         <!-- NAV LINKS -->
         <section id="footer-links" class="container">
             <nav>
+                <div class="links-left">
+
+                </div>
                 <!-- COL LEFT -->
                 <div class="col">
                     <h3>DC COMICS</h3>
@@ -171,6 +174,9 @@ export default {
                     </ul>
                 </div>
 
+                <div id="big-logo">
+
+                </div>
             </nav>
 
         </section>
@@ -232,6 +238,15 @@ ul {
         }
     }
 }
+
+#big-logo {
+    width: 100%;
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
 
 // SOCIALS FOOTER-BOTTOM
 #footer-socials {
