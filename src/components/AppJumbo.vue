@@ -1,6 +1,9 @@
 <script>
 export default {
     name: 'AppJumbo',
+    props: {
+        products: Array
+    },
     data() {
         return {
             links: [
@@ -80,7 +83,9 @@ export default {
         <!-- BLACKBOARD -->
         <section id="contents-space">
             <div class="blackboard">
-                <h3>--> Content goes here </h3>
+                <div class="product-card">
+                    <img src="" alt="">
+                </div>
             </div>
         </section>
 
@@ -107,9 +112,14 @@ export default {
 
 #contents-space {
     .blackboard {
-        @include flex-between;
+        display: flex;
+        flex-wrap: wrap;
         min-height: 100px;
         background-color: black;
+
+        .product-card {
+            flex-basis: 25%;
+        }
 
         h3 {
             color: white;
