@@ -129,6 +129,8 @@ export default {
 
             p {
                 color: white;
+                margin-top: 10px;
+                font-size: 14px;
             }
 
             img {
