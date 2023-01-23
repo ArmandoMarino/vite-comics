@@ -105,7 +105,7 @@ export default {
 
 <template>
   <AppHeader />
-  <AppJumbo />
+  <AppJumbo :products="products" />
   <AppFooter />
 </template>
 

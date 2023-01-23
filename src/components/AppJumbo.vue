@@ -83,8 +83,8 @@ export default {
         <!-- BLACKBOARD -->
         <section id="contents-space">
             <div class="blackboard">
-                <div class="product-card">
-                    <img src="" alt="">
+                <div v-for="product in products" :key="product.thumb" class="product-card">
+                    <img :src="product.thumb" alt="product.series">
                 </div>
             </div>
         </section>
@@ -118,7 +118,7 @@ export default {
         background-color: black;
 
         .product-card {
-            flex-basis: 25%;
+            flex-basis: calc(100% / 6)
         }
 
         h3 {
