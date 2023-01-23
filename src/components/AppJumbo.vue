@@ -111,6 +111,7 @@ export default {
 @use '../assets/scss/partials/mixins' as *;
 @use '../assets/scss/partials/variables' as *;
 
+// PRODUCTS
 #contents-space {
     background-color: black;
 
@@ -122,22 +123,10 @@ export default {
         min-height: 100px;
 
         .product-card {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
             flex-basis: calc(100% / 6);
 
             p {
                 color: white;
-                margin-top: 10px;
-                font-size: 14px;
-            }
-
-            img {
-                width: 100%;
-                height: 150px;
-                object-fit: cover;
-                object-position: top;
             }
         }
 
@@ -148,7 +137,7 @@ export default {
     }
 }
 
-
+// CENTER NAV
 #center-nav {
     @include flex-between;
     min-height: 140px;
