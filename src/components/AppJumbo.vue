@@ -84,7 +84,7 @@ export default {
 
 <template>
     <main>
-        <!-- BLACKBOARD -->
+        <!-- BLACKBOARD PRODUCTS LIST -->
         <section id="contents-space">
             <div class="blackboard">
                 <ProductsCard v-for="product in products" :key="product.thumb" :product="product" />

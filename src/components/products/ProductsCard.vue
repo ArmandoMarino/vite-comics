@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'ProductCard'
+    name: 'ProductCard',
     props: {
         product: Object
     }
