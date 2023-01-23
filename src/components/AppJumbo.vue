@@ -84,7 +84,8 @@ export default {
         <section id="contents-space">
             <div class="blackboard">
                 <div v-for="product in products" :key="product.thumb" class="product-card">
-                    <img :src="product.thumb" alt="product.series">
+                    <img :src="product.thumb" :alt="product.series">
+                    <p>{{ product.series }}</p>
                 </div>
             </div>
         </section>
@@ -111,14 +112,31 @@ export default {
 @use '../assets/scss/partials/variables' as *;
 
 #contents-space {
+    background-color: black;
+
     .blackboard {
+        margin: 0 auto;
+        max-width: 1000px;
         display: flex;
         flex-wrap: wrap;
         min-height: 100px;
-        background-color: black;
 
         .product-card {
-            flex-basis: calc(100% / 6)
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            flex-basis: calc(100% / 6);
+
+            p {
+                color: white;
+            }
+
+            img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                object-position: top;
+            }
         }
 
         h3 {
