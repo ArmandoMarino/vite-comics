@@ -84,6 +84,10 @@ export default {
 
 <template>
     <main>
+        <div class="image-main">
+            <img src="../assets/img/jumbotron.jpg" alt="Teen Titans">
+        </div>
+
         <!-- BLACKBOARD PRODUCTS LIST -->
         <section id="contents-space">
             <div class="blackboard">
@@ -108,9 +112,20 @@ export default {
     </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @use '../assets/scss/partials/mixins' as *;
 @use '../assets/scss/partials/variables' as *;
+
+// IMAGE-MAIN
+.image-main {
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
 
 // PRODUCTS
 #contents-space {
@@ -128,8 +143,11 @@ export default {
 
             p {
                 color: white;
+                display: block;
             }
         }
+
+
 
         h3 {
             color: white;
