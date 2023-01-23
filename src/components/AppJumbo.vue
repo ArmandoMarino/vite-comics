@@ -1,6 +1,10 @@
 <script>
+import ProductsCard from './products/ProductsCard.vue';
 export default {
     name: 'AppJumbo',
+    components: {
+        ProductsCard
+    },
     props: {
         products: Array
     },
@@ -83,10 +87,7 @@ export default {
         <!-- BLACKBOARD -->
         <section id="contents-space">
             <div class="blackboard">
-                <div v-for="product in products" :key="product.thumb" class="product-card">
-                    <img :src="product.thumb" :alt="product.series">
-                    <p>{{ product.series }}</p>
-                </div>
+                <ProductsCard v-for="product in products" :key="product.thumb" :product="product" />
             </div>
         </section>
 
